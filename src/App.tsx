@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Home from './pages/Home';
-import Auth from './pages/Auth';
+import Home from './pages/HomePage';
+import Auth from './pages/AuthPage';
 
 function App() {
 	const location = useLocation();

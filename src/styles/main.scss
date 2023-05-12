@@ -1,3 +1,11 @@
+@import 'base/colors';
 @import 'base/reset';
 @import 'base/typography';
-@import 'base/colors';
+
+//components
+@import 'components/ContentWrapper';
+@import 'components/Box';
+@import 'components/Logo';
+
+//pages
+@import 'pages/AuthPage';
