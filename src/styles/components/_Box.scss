@@ -1,0 +1,15 @@
+.boxContainer{
+    z-index: 1;
+    background-color: $color-white;
+    padding: 5rem;
+    border-radius: 1rem;
+    max-width: 60%;
+    *{
+        font-family: $font-primary;
+        color: $color-darkgreen;
+    }
+    h1{
+        font-family: $font-titles;
+        color: $color-black;
+    }
+}

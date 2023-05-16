@@ -1,0 +1,47 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    outline: none;
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    box-shadow: .5rem .5rem .5rem lighten($color-black, 70);
+    svg{
+        font-size: 1.8rem;
+    }
+    &.blue{
+        border-color: $color-blue;
+        background-color: lighten($color-blue, 50);
+        svg{
+            fill: $color-blue;
+            color: $color-blue;
+        }
+        &:hover{
+            background-color: lighten($color-blue, 40);
+        }
+    }
+    &.green{
+        border-color: $color-lightgreen;
+        background-color: lighten($color-lightgreen, 50);
+        &:hover{
+            background-color: lighten($color-lightgreen, 40);
+        }
+    }
+    &.red{
+        border-color: $color-red;
+        background-color: lighten($color-red, 50);
+        &:hover{
+            background-color: lighten($color-red, 40);
+        }
+    }
+    &:hover{
+        transform: scale(1.05);
+        
+    }
+}
