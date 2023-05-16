@@ -33,6 +33,13 @@
             background-color: lighten($color-lightgreen, 40);
         }
     }
+    &.red{
+        border-color: $color-red;
+        background-color: lighten($color-red, 50);
+        &:hover{
+            background-color: lighten($color-red, 40);
+        }
+    }
     &:hover{
         transform: scale(1.05);
         
