@@ -1,0 +1,40 @@
+.menu{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color: $color-bg-dark;
+    color: $color-white;
+    .logo{
+        padding: 1rem 2rem;
+        width: 30vw;
+        svg{
+            fill: $color-white;
+            margin-right: 1rem;
+        }
+    }
+    .navbar{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 80vw;
+        font-family: $font-titles;
+        .topIcons{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-right: 4rem;
+            font-size: 2.2rem;
+            &:first-child{
+                height: 35px;
+            }
+            &:last-child{
+                font-size: 2.7rem;
+            }
+            svg{
+                margin-inline: 2rem;
+            }
+        }
+    }
+}

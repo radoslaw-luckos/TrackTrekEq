@@ -43,6 +43,7 @@ const Auth = () => {
 			navigate('/');
 		} catch (error) {
 			console.log(error);
+			//error handling TODO
 		}
 	};
 
@@ -60,14 +61,14 @@ const Auth = () => {
 				<Box>
 					<Logo />
 					<h2 className='authPageHeading'>
-						It is an app that helps you to track easily your whole mountain equipment!
+						It is an app that helps you track your whole mountain equipment easily!
 					</h2>
 					<p className='authPageText'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cumque cupiditate
 						libero aperiam. Porro nostrum recusandae tempore dicta officia assumenda ut, reiciendis,
 						id temporibus alias eum necessitatibus quis consequuntur perspiciatis!
 					</p>
-					<h3 className='authPageMessage'>Join it wright now!</h3>
+					<h3 className='authPageMessage'>Join it right now!</h3>
 					<div className='authPageSingInBtns'>
 						<Button
 							color={ButtonColor.Green}
