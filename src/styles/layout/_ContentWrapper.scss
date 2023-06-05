@@ -7,4 +7,21 @@
     height: 100vh;
     position: relative;    
     font-family: $font-primary;
+    &__container{
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:810px) {
+    .contentWrapper {
+        &__container{
+            position: relative;
+            .contentSection {
+                width: 100%;
+            }
+        }
+    }
 }

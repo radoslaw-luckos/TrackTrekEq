@@ -9,3 +9,32 @@
     padding-top: 5rem;
     gap: 4rem;
 }
+
+@media (max-width: 1400px){
+    .sidebar {
+        width: 30%;
+    }
+}
+@media (max-width: 1110px){
+    .sidebar {
+        width: 35%;
+    }
+}
+
+@media (max-width: 980px){
+    .sidebar {
+        width: 40%;
+    }
+}
+
+@media (max-width: 810px){
+    .sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        &--closed{
+            display: none;
+        }
+    }
+}

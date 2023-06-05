@@ -3,11 +3,13 @@ import { mockItems, mockLists } from '../utils/Mock';
 import Items from '../components/Items';
 import Lists from '../components/Lists';
 
-type Props = {};
+type Props = {
+	isSidebarOpened: boolean;
+};
 
-const Sidebar = (props: Props) => {
+const Sidebar = ({ isSidebarOpened }: Props) => {
 	return (
-		<nav className='sidebar'>
+		<nav className={`sidebar ${!isSidebarOpened && 'sidebar--closed'}`}>
 			<Lists listsArray={mockLists} />
 			<Items itemsArray={mockItems} />
 		</nav>

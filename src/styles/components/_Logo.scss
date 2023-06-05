@@ -2,8 +2,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: center;   
     font-family: $font-titles;
     padding: 1rem 0rem;
     width: 25vw;
@@ -11,5 +10,31 @@
         fill: $color-white;
         font-size: 2rem;
         margin-right: 1rem;
+    }
+}
+
+@media (max-width: 1400px){
+    .logo {
+        width: 30vw;
+    }
+}
+@media (max-width: 1110px){
+    .logo {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 980px){
+    .logo {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 810px) {
+    .logo {
+        width: 100%;
+        padding: 0;
+        padding-top: .5rem;
+        font-size: 1.1rem;
     }
 }
