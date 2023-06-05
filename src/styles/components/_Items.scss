@@ -1,0 +1,26 @@
+.userItems {
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-left: 0;
+        background:transparent;
+        line-height: 1.5rem;
+        padding-inline: .5rem 0.25rem;
+        color: $color-white;
+        font-size: .9rem;
+        button {
+            border: none;
+            background: transparent;
+            color: $color-red;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}

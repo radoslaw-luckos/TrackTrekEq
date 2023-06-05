@@ -1,6 +1,6 @@
-import Box from '../components/layout/Box';
-import Button from '../components/layout/Button';
-import ContentWrapper from '../components/layout/ContentWrapper';
+import Box from '../layout/Box';
+import Button from '../components/Button';
+import ContentWrapper from '../layout/ContentWrapper';
 import Logo from '../components/Logo';
 import { ButtonColor } from '../utils/Enums';
 import { FcGoogle } from 'react-icons/fc';

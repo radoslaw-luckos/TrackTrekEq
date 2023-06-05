@@ -1,0 +1,11 @@
+.homePage {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: calc(100% - 7rem);
+    &__content{
+        width: 75%;
+        height: 100%;
+    }
+    
+}

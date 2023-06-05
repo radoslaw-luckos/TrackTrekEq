@@ -3,13 +3,19 @@
 @import 'base/typography';
 
 //components
-@import 'components/ContentWrapper';
-@import 'components/Box';
 @import 'components/Logo';
 @import 'components/Button';
+@import 'components/ListHeader';
+@import 'components/Lists';
+@import 'components/Items';
+
 
 //layout
 @import 'layout/Menu';
+@import 'layout/ContentWrapper';
+@import 'layout/Sidebar';
+@import 'layout/Box';
 
 //pages
 @import 'pages/AuthPage';
+@import 'pages/HomePage';

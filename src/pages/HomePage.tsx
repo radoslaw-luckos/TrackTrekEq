@@ -1,10 +1,10 @@
 import { auth } from '../utils/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import Button from '../components/layout/Button';
+import Button from '../components/Button';
 import { ButtonColor } from '../utils/Enums';
-import Menu from '../components/layout/Menu';
-import ContentWrapper from '../components/layout/ContentWrapper';
+import ContentWrapper from '../layout/ContentWrapper';
+import Sidebar from '../layout/Sidebar';
 
 const Home = () => {
 	const [user, loading] = useAuthState(auth);
@@ -18,19 +18,24 @@ const Home = () => {
 		navigate('/auth');
 	}
 	if (loading) return <h1>Loading ...</h1>;
-	if (user)
-		return (
-			<ContentWrapper>
-				<Menu />
-				<h1>Hi {`${user.displayName}`!}</h1>
-				<Button
-					color={ButtonColor.Red}
-					clickHandler={logoutHandler}
-				>
-					<p>Sign Out</p>
-				</Button>
-			</ContentWrapper>
-		);
+	if (user) console.log(user);
+
+	return (
+		<ContentWrapper>
+			<div className='homePage'>
+				<Sidebar />
+				<div className='homePage__content'>
+					<h1>Hi {`${user.displayName}`!}</h1>
+					<Button
+						color={ButtonColor.Red}
+						clickHandler={logoutHandler}
+					>
+						<p>Sign Out</p>
+					</Button>
+				</div>
+			</div>
+		</ContentWrapper>
+	);
 };
 
 export default Home;

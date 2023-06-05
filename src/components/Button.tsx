@@ -1,8 +1,9 @@
 import React from 'react';
+import { ButtonColor } from '../utils/Enums';
 
 type ButtonProps = {
 	children: React.ReactNode;
-	color: any;
+	color: ButtonColor;
 	clickHandler: any;
 };
 

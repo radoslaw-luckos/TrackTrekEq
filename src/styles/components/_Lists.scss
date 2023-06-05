@@ -1,0 +1,28 @@
+.userLists {
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-left: 0;
+        background: linear-gradient(180deg, #5B6A5F 0%, rgba(91, 106, 95, 0.13) 64.58%);
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        padding-inline: .5rem 0.25rem;
+        color: $color-white;
+        cursor: pointer;
+        font-size: .9rem;
+        button {
+            border: none;
+            background: transparent;
+            color: $color-red;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}

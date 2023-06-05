@@ -1,4 +1,4 @@
-import Logo from '../Logo';
+import Logo from '../components/Logo';
 import { ImShare2 } from 'react-icons/im';
 import { CgProfile } from 'react-icons/cg';
 

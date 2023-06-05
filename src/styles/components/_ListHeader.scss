@@ -1,0 +1,20 @@
+.listHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    &__title {
+        font-family: $font-titles;
+        color: $color-white;
+    }
+    &__btn{
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        svg path{
+            stroke: $color-lightgreen;
+        }
+    }
+}

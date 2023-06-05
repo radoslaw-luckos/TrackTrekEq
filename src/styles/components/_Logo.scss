@@ -5,9 +5,11 @@
     justify-content: center;
     width: 100%;
     font-family: $font-titles;
+    padding: 1rem 0rem;
+    width: 25vw;
     svg{
+        fill: $color-white;
         font-size: 2rem;
-        margin-left: .5rem;
-        fill: $color-black;
+        margin-right: 1rem;
     }
 }
