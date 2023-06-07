@@ -11,7 +11,10 @@ const Items = ({ itemsArray }: Props) => {
 			<ListHeader title='Your Items' />
 			<ul>
 				{itemsArray.map((item) => (
-					<SingleItemElement item={item} />
+					<SingleItemElement
+						key={item}
+						item={item}
+					/>
 				))}
 			</ul>
 		</section>

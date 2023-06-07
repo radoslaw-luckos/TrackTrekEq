@@ -1,31 +1,33 @@
-.bgImage{
-    position: absolute;
-    top: 0;left: 0;
-    width: 100%;
+.authPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    z-index: 0;
-}
-.authPageTitle{
+    width: 100%;
+    background-image: url('/src/assets/images/authbg.jpg');
+    background-size: cover;
+    &__Title{
         text-align: center;
         padding-bottom: 1rem;
-} 
-.authPageHeading{
-    font-size: 1.2rem;
-    text-align: center;
-}
-.authPageText{
-    text-align: justify;
-    padding-top: .5rem;
-    font-size: .9rem;
-    max-width: 75%;
-    margin: auto;
-}
-.authPageMessage {
-    text-align: center;
-    padding: .5rem 0;
-}
-.authPageSingInBtns{
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
+    } 
+    &__Heading{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__Text{
+        text-align: justify;
+        padding-top: .5rem;
+        font-size: .9rem;
+        max-width: 75%;
+        margin: auto;
+    }
+    &__Message {
+        text-align: center;
+        padding: .5rem 0;
+    }
+    &__SingInBtns{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
 }

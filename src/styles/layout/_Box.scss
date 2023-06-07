@@ -4,11 +4,13 @@
     padding: 5rem;
     border-radius: 1rem;
     max-width: 60%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     *{        
         color: $color-darkgreen;
     }
     h1{
         font-family: $font-titles;
-        color: $color-black;
     }
 }

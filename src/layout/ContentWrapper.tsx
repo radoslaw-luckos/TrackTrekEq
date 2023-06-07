@@ -21,7 +21,7 @@ const ContentWrapper = ({ children }: contentWrapperProps) => {
 					/>
 				)}
 				<div className='contentWrapper__container'>
-					<Sidebar isSidebarOpened={isSidebarOpened} />
+					{currentPath !== '/auth' && <Sidebar isSidebarOpened={isSidebarOpened} />}
 					<section className='contentSection'>{children}</section>
 				</div>
 			</main>

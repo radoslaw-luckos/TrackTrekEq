@@ -53,39 +53,36 @@ const Auth = () => {
 	if (!user)
 		return (
 			<ContentWrapper>
-				<img
-					src='src/assets/images/authbg.jpg'
-					alt='Auth Page Background'
-					className='bgImage'
-				/>
-				<Box>
-					<Logo />
-					<h2 className='authPageHeading'>
-						It is an app that helps you track your whole mountain equipment easily!
-					</h2>
-					<p className='authPageText'>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cumque cupiditate
-						libero aperiam. Porro nostrum recusandae tempore dicta officia assumenda ut, reiciendis,
-						id temporibus alias eum necessitatibus quis consequuntur perspiciatis!
-					</p>
-					<h3 className='authPageMessage'>Join it right now!</h3>
-					<div className='authPageSingInBtns'>
-						<Button
-							color={ButtonColor.Green}
-							clickHandler={googleLogin}
-						>
-							<FcGoogle />
-							<p>Sign in with Google</p>
-						</Button>
-						<Button
-							color={ButtonColor.Blue}
-							clickHandler={facebookLogin}
-						>
-							<AiFillFacebook />
-							<p>Sign in with Facebook</p>
-						</Button>
-					</div>
-				</Box>
+				<div className='authPage'>
+					<Box>
+						<Logo />
+						<h2 className='authPage__Heading'>
+							It is an app that helps you track your whole mountain equipment easily!
+						</h2>
+						<p className='authPage__Text'>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cumque cupiditate
+							libero aperiam. Porro nostrum recusandae tempore dicta officia assumenda ut,
+							reiciendis, id temporibus alias eum necessitatibus quis consequuntur perspiciatis!
+						</p>
+						<h3 className='authPage__Message'>Join it right now!</h3>
+						<div className='authPage__SingInBtns'>
+							<Button
+								color={ButtonColor.Green}
+								clickHandler={googleLogin}
+							>
+								<FcGoogle />
+								<p>Sign in with Google</p>
+							</Button>
+							<Button
+								color={ButtonColor.Blue}
+								clickHandler={facebookLogin}
+							>
+								<AiFillFacebook />
+								<p>Sign in with Facebook</p>
+							</Button>
+						</div>
+					</Box>
+				</div>
 			</ContentWrapper>
 		);
 };
