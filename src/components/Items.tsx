@@ -1,21 +1,26 @@
+import { useContext } from 'react';
+import { UserContextType } from '../context/@types.user';
+import { UserContext } from '../context/UserContext';
 import ListHeader from './ListHeader';
 import SingleItemElement from './SingleItemElement';
 
-type Props = {
-	itemsArray: string[];
-};
+const Items = () => {
+	const { userData } = useContext(UserContext) as UserContextType;
 
-const Items = ({ itemsArray }: Props) => {
 	return (
 		<section className='userItems'>
 			<ListHeader title='Your Items' />
 			<ul>
-				{itemsArray.map((item) => (
-					<SingleItemElement
-						key={item}
-						item={item}
-					/>
-				))}
+				{userData.items.length ? (
+					userData.items.map((item) => (
+						<SingleItemElement
+							key={item}
+							item={item}
+						/>
+					))
+				) : (
+					<p>You don't have any lists yet</p>
+				)}
 			</ul>
 		</section>
 	);

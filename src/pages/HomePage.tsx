@@ -7,11 +7,15 @@ import ContentWrapper from '../layout/ContentWrapper';
 import { useEffect } from 'react';
 import { db } from '../utils/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
+import { useContext } from 'react';
+import { UserContextType, IUserData } from '../context/@types.user';
+import { UserContext } from '../context/UserContext';
 
 const Home = () => {
 	const [user, loading] = useAuthState(auth);
 	const navigate = useNavigate();
 	const usersRef = collection(db, 'users');
+	const { setUser } = useContext(UserContext) as UserContextType;
 
 	const logoutHandler = () => {
 		auth.signOut();
@@ -25,19 +29,26 @@ const Home = () => {
 		if (user) {
 			const getUserData = async () => {
 				const userDataQuery = query(usersRef, where('email', '==', user.email));
-				const data = await getDocs(userDataQuery);
-				console.log(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+				const response = await getDocs(userDataQuery);
+				const data = response.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+				const userData: IUserData = {
+					id: data[0]?.id,
+					email: data[0]?.email,
+					items: data[0]?.items,
+					lists: data[0]?.lists,
+				};
+				setUser(userData);
 			};
 			getUserData();
 		}
-	}, []);
+	});
 
 	if (loading) return <h1>Loading ...</h1>;
 
 	return (
 		<ContentWrapper>
 			<div className='homePage'>
-				<h1>Hi {`${user.displayName}`!}</h1>
+				<h1>Hi {`${user?.displayName}`!}</h1>
 				<Button
 					color={ButtonColor.Red}
 					clickHandler={logoutHandler}

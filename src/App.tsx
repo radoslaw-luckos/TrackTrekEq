@@ -14,6 +14,7 @@ function App() {
 					path='/'
 					element={<Home />}
 				/>
+
 				<Route
 					path='/auth'
 					element={<Auth />}
