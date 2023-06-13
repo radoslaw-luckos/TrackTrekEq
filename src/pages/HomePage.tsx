@@ -10,12 +10,13 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { useContext } from 'react';
 import { UserContextType, IUserData } from '../context/@types.user';
 import { UserContext } from '../context/UserContext';
+import AddItemFormModal from '../components/AddItemFormModal';
 
 const Home = () => {
 	const [user, loading] = useAuthState(auth);
 	const navigate = useNavigate();
 	const usersRef = collection(db, 'users');
-	const { setUser } = useContext(UserContext) as UserContextType;
+	const { setUser, addItemModalOpened } = useContext(UserContext) as UserContextType;
 
 	const logoutHandler = () => {
 		auth.signOut();
@@ -47,6 +48,7 @@ const Home = () => {
 
 	return (
 		<ContentWrapper>
+			{addItemModalOpened && <AddItemFormModal />}
 			<div className='homePage'>
 				<h1>Hi {`${user?.displayName}`!}</h1>
 				<Button

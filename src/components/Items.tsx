@@ -5,17 +5,21 @@ import ListHeader from './ListHeader';
 import SingleItemElement from './SingleItemElement';
 
 const Items = () => {
-	const { userData } = useContext(UserContext) as UserContextType;
+	const { userData, setAddItemModalOpened } = useContext(UserContext) as UserContextType;
 
 	return (
 		<section className='userItems'>
-			<ListHeader title='Your Items' />
+			<ListHeader
+				title='Your Items'
+				addHandler={() => setAddItemModalOpened(true)}
+			/>
 			<ul>
 				{userData.items.length ? (
 					userData.items.map((item) => (
 						<SingleItemElement
-							key={item}
-							item={item}
+							key={item.id}
+							id={item.id}
+							itemName={item.itemName}
 						/>
 					))
 				) : (

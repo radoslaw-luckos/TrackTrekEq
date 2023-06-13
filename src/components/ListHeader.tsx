@@ -8,7 +8,10 @@ const ListHeader = ({ title, addHandler }: Props) => {
 	return (
 		<header className='listHeader'>
 			<h2 className='listHeader__title '>{title}</h2>
-			<button className='listHeader__btn'>
+			<button
+				className='listHeader__btn'
+				onClick={() => addHandler()}
+			>
 				<GrAddCircle />
 			</button>
 		</header>
