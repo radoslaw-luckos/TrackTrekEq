@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import { auth } from '../utils/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import ContentWrapper from '../layout/ContentWrapper';
@@ -9,6 +9,10 @@ import { useContext } from 'react';
 import { UserContextType, IUserData } from '../context/@types.user';
 import { UserContext } from '../context/UserContext';
 import AddItemFormModal from '../components/AddItemFormModal';
+import Auth from './AuthPage';
+import ListComponent from '../components/ListComponent';
+import WelcomeComponent from '../components/WelcomeComponent';
+import { Path } from '../utils/Enums';
 
 const Home = () => {
 	const [user, loading] = useAuthState(auth);
@@ -42,7 +46,21 @@ const Home = () => {
 	return (
 		<ContentWrapper>
 			{addItemModalOpened && <AddItemFormModal />}
-			<div className='homePage'></div>
+			<div className='homePage'>
+				<Routes
+					location={location}
+					key={location.pathname}
+				>
+					<Route
+						path={Path.List}
+						element={<ListComponent />}
+					/>
+					<Route
+						path={Path.Welcome}
+						element={<WelcomeComponent />}
+					/>
+				</Routes>
+			</div>
 		</ContentWrapper>
 	);
 };
