@@ -1,8 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../utils/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
-import Button from '../components/Button';
-import { ButtonColor } from '../utils/Enums';
 import ContentWrapper from '../layout/ContentWrapper';
 import { useEffect } from 'react';
 import { db } from '../utils/firebase';
@@ -17,11 +15,6 @@ const Home = () => {
 	const navigate = useNavigate();
 	const usersRef = collection(db, 'users');
 	const { setUser, addItemModalOpened } = useContext(UserContext) as UserContextType;
-
-	const logoutHandler = () => {
-		auth.signOut();
-		navigate('/auth');
-	};
 
 	useEffect(() => {
 		if (!user) {
@@ -49,15 +42,7 @@ const Home = () => {
 	return (
 		<ContentWrapper>
 			{addItemModalOpened && <AddItemFormModal />}
-			<div className='homePage'>
-				<h1>Hi {`${user?.displayName}`!}</h1>
-				<Button
-					color={ButtonColor.Red}
-					clickHandler={logoutHandler}
-				>
-					<p>Sign Out</p>
-				</Button>
-			</div>
+			<div className='homePage'></div>
 		</ContentWrapper>
 	);
 };

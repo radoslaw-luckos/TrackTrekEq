@@ -11,13 +11,13 @@
     border-style: solid;
     cursor: pointer;
     transition: all .3s ease-in-out;
-    box-shadow: .5rem .5rem .5rem lighten($color-black, 70);
     svg{
         font-size: 1.8rem;
     }
     &.blue{
         border-color: $color-blue;
         background-color: lighten($color-blue, 50);
+        box-shadow: .5rem .5rem .5rem lighten($color-black, 70);
         svg{
             fill: $color-blue;
             color: $color-blue;
@@ -27,6 +27,7 @@
         }
     }
     &.green{
+        box-shadow: .5rem .5rem .5rem lighten($color-black, 70);
         border-color: $color-lightgreen;
         background-color: lighten($color-lightgreen, 50);
         &:hover{
@@ -35,7 +36,8 @@
     }
     &.red{
         border-color: $color-red;
-        background-color: lighten($color-red, 50);
+        background-color: transparent;
+        color: $color-red;
         &:hover{
             background-color: lighten($color-red, 40);
         }
